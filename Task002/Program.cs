@@ -14,10 +14,18 @@ int InputInt(string message)
 int number = InputInt("Введите целое  число");
 if (number > 99 && number < 1000)
 {
-    int result = number%10;
-    Console.WriteLine("Последняя цифра числа равна " + result);
+    int result = number % 10;
+    Console.WriteLine("Третья цифра числа равна " + result);
 }
-else 
+else
 {
-    Console.WriteLine("Третьей цифры нет ");
+    if (number > 1000 && number < 1000000)
+    {
+        int result = (number % 10000) / 1000;
+        Console.WriteLine("Третья цифра числа равна " + result);
+    }
+    else
+    {
+        Console.WriteLine("Третьей цифры нет ");
+    }
 }
