@@ -13,18 +13,21 @@ int InputInt(string message)
     return dayOfWeek;
 }
 int dayOfWeek = InputInt("Введите число обозначающее день недели");
-int dayOfWeeKSunday=7;
-int dayOfWeekSaturday=6;
-if(dayOfWeek<dayOfWeekSaturday)
+int dayOfWeeKSunday = 7;
+int dayOfWeekSaturday = 6;
+if (dayOfWeek < dayOfWeekSaturday && dayOfWeek <= dayOfWeeKSunday)
 {
     Console.WriteLine("Рабочий день");
 
 }
 else
 {
-    Console.WriteLine("Выходной день");
-}
-if(dayOfWeek>dayOfWeeKSunday)
-{
-    Console.WriteLine("Нет такого дня недели");
+    if (dayOfWeek>dayOfWeeKSunday)
+    {
+        Console.WriteLine("Нет такого дня недели");
+    }
+    else
+    {
+        Console.WriteLine("Выходной день");
+    }
 }
